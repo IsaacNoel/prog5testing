@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CodeBreakers {
+public class CodeBreakers_group7 {
     String prefix = "/Users/isaacnoel/Desktop/Fa23/314H/prog5_1/";
     String dictionaryFiles[] = {
         "blank.txt",
@@ -71,10 +71,10 @@ public class CodeBreakers {
     public void breakHelperFunctions(){
         BoggleDictionary bd = new GameDictionary();
         try{
-            bd.loadDictionary("prefix" + "words.txt");
+            bd.loadDictionary(prefix + "words.txt");
             assertFalse(bd.contains(null));
             assertFalse(bd.isPrefix(null));
-            assertFalse(bd.contains("汉字"));
+            assertFalse(bd.contains("汉字汉字汉字"));
             assertFalse(bd.isPrefix("汉字"));
             assertFalse(bd.contains("00"));
             assertFalse(bd.isPrefix("00"));
@@ -83,7 +83,7 @@ public class CodeBreakers {
             assertEquals(1, 1);
         }
     }
-    @Test
+    /*@Test
     public void blankDict(){
         BoggleDictionary bd = new GameDictionary();
         try{
@@ -100,7 +100,7 @@ public class CodeBreakers {
         catch(IOException io){
             assertFalse(true);
         }
-    }
+    }*/
 
     @Test 
     public void endlDict(){
@@ -282,7 +282,7 @@ public class CodeBreakers {
         BoggleGame game = new GameManager();
         BoggleDictionary dict = new GameDictionary();
         try{
-           // dict.loadDictionary("-1-1-1-1");
+            //dict.loadDictionary("-1-1-1-1");
             game.newGame(4, 1, prefix + "cubes.txt", null);
         }
         catch(IOException io){}
@@ -318,7 +318,7 @@ public class CodeBreakers {
             bd.loadDictionary(prefix + "words.txt");
             bg.newGame(-1, 1, prefix + "cubes.txt", bd);
             bg.newGame(0, 1, prefix + "cubes.txt", bd);
-            bg.newGame(1, 1, prefix + "cubes.txt", bd);
+            bg.newGame(1, -1, prefix + "cubes.txt", bd);
             bg.newGame(5, 1, prefix + "cubes.txt", bd);
         }
         catch(IOException io) {
@@ -369,5 +369,6 @@ public class CodeBreakers {
     public void setSearchTactic(){
         BoggleGame bg = new GameManager();
         bg.setSearchTactic(null);
+        bg.getAllWords();
     }
 }

@@ -10,12 +10,12 @@ import assignment.BoggleGame.SearchTactic;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class JackTest {
+public class JackTest_group7 {
     String prefix = "/Users/isaacnoel/Desktop/Fa23/314H/prog5_1/";
     @Test
     public void nullinputs(){
-        BoggleGame game = new GameManager();
-        BoggleDictionary dict = new GameDictionary();
+        GameManager game = new GameManager();
+        GameDictionary dict = new GameDictionary();
         try{
             dict.loadDictionary(null);
             game.newGame(4, 1, null, null);
@@ -26,8 +26,8 @@ public class JackTest {
     }
     @Test
     public void longerCube(){
-        BoggleGame game = new GameManager();
-        BoggleDictionary dict = new GameDictionary();
+        GameManager game = new GameManager();
+        GameDictionary dict = new GameDictionary();
         try{
             dict.loadDictionary(prefix + "words.txt");
             game.newGame(4,1,prefix + "text.txt",dict);
@@ -38,8 +38,8 @@ public class JackTest {
     }
     @Test
     public void shorterCube(){
-        BoggleGame game = new GameManager();
-        BoggleDictionary dict = new GameDictionary();
+        GameManager game = new GameManager();
+        GameDictionary dict = new GameDictionary();
         try{
             dict.loadDictionary(prefix + "words.txt");
             game.newGame(4,1,"/Users/ylhy2/Desktop/prog5/shortercubes.txt",dict);
@@ -50,8 +50,8 @@ public class JackTest {
     }
     @Test
     public void chineseCube(){
-        BoggleGame game = new GameManager();
-        BoggleDictionary dict = new GameDictionary();
+        GameManager game = new GameManager();
+        GameDictionary dict = new GameDictionary();
         try{
             dict.loadDictionary(prefix + "words.txt");
             game.newGame(4,1,"/Users/ylhy2/Desktop/prog5/chinesecubes.txt",dict);
@@ -62,8 +62,8 @@ public class JackTest {
     }
     @Test
     public void fewCube(){
-        BoggleGame game = new GameManager();
-        BoggleDictionary dict = new GameDictionary();
+        GameManager game = new GameManager();
+        GameDictionary dict = new GameDictionary();
         try{
             dict.loadDictionary(prefix + "words.txt");
             game.newGame(4,1,"/Users/ylhy2/Desktop/prog5/fewcubes.txt",dict);
@@ -74,8 +74,8 @@ public class JackTest {
     }
     @Test
     public void fewCubeV2(){
-        BoggleGame game = new GameManager();
-        BoggleDictionary dict = new GameDictionary();
+        GameManager game = new GameManager();
+        GameDictionary dict = new GameDictionary();
         try{
             dict.loadDictionary(prefix + "words.txt");
             game.newGame(10,1,"/Users/ylhy2/Desktop/prog5/fewcubes.txt",dict);
@@ -86,8 +86,8 @@ public class JackTest {
     }
     @Test
     public void setBoard(){
-        BoggleGame game = new GameManager();
-        BoggleDictionary dict = new GameDictionary();
+        GameManager game = new GameManager();
+        GameDictionary dict = new GameDictionary();
         try{
             dict.loadDictionary(prefix + "words.txt");
             game.newGame(10,1,prefix + "cubes.txt",dict);
